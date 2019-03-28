@@ -1,5 +1,8 @@
 package com.evry.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -20,7 +23,7 @@ public class AccountService {
 	     try {
 	         tx = session.getTransaction();
 	         tx.begin();
-	        ;
+	        
 	         session.saveOrUpdate(account);       
 	         tx.commit();
 	     } catch (Exception e) {
@@ -57,6 +60,28 @@ public class AccountService {
 	     return result;
 	    
 	}
+	
+	 public List<Account> getListOfAccounts(){
+	        List<Account> list = new ArrayList<Account>();
+	        Session session = HibernateUtil.getSessionFactory().openSession();
+	        Transaction tx = null;       
+	        try {
+	            tx = session.getTransaction();
+	            tx.begin();
+	            list = session.createQuery("from Account").list();                       
+	            tx.commit();
+	        } catch (Exception e) {
+	            if (tx != null) {
+	                tx.rollback();
+	            }
+	            e.printStackTrace();
+	        } finally {
+	            session.close();
+	        }
+	        return list;
+	    }
 
+	
+		
 	
 }

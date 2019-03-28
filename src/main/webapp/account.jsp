@@ -11,24 +11,29 @@ table.inner{border: 0px}
 </head>
 <body>
 <h3>Account Details</h3>
-<form action="UpdateServlet" method="POST">
+<form action="AccountServlet" method="POST">
 <table align="center" cellpadding = "10">
 <tr>
-<td>Enter Account Id</td>
-<td><input type="text" name="aid" maxlength="30"/>
+<td>Account Number</td>
+<td><input type="text" name="accountNumber" maxlength="30"/>
 
 </td>
 </tr>
 
 <tr>
-<td>Enter Amount</td>
-<td><input type="text" name="balance" maxlength="30"/>
+<td>Account Name</td>
+<td><input type="text" name="accountName" maxlength="30"/>
+
 </td>
+</tr>
+<tr>
+<td>Enter Amount</td>
+<td><input type="text" name="balance" maxlength="100" /></td>
 </tr>
 
 <tr>
 <td colspan="2" align="center">
-<input type="submit" value="update">
+<input type="submit" value="Submit">
 <input type="reset" value="Reset">
 </td>
 </tr>

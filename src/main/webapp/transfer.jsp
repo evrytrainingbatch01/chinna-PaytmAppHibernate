@@ -10,26 +10,31 @@ table.inner{border: 0px}
 </style>
 </head>
 <body>
-<h3>Account Details</h3>
-<form action="UpdateServlet" method="POST">
+<h3>Transaction Amount Here</h3>
+<form action="TransferServlet" method="POST">
 <table align="center" cellpadding = "10">
 <tr>
-<td>Enter Account Id</td>
-<td><input type="text" name="aid" maxlength="30"/>
+<td>Enter your Account ID:</td>
+<td><input type="text" name="accid" maxlength="30"/>
 
 </td>
 </tr>
 
 <tr>
-<td>Enter Amount</td>
-<td><input type="text" name="balance" maxlength="30"/>
+<td>Enter Transfer Account ID:</td>
+<td><input type="text" name="taid" maxlength="30"/>
+
 </td>
+</tr>
+<tr>
+<td>How much amount your transfer</td>
+<td><input type="text" name="tbal" maxlength="100" /></td>
 </tr>
 
 <tr>
 <td colspan="2" align="center">
-<input type="submit" value="update">
-<input type="reset" value="Reset">
+<input type="submit" value="Transfer">
+<input type="reset" value="Cancle">
 </td>
 </tr>
 </table>

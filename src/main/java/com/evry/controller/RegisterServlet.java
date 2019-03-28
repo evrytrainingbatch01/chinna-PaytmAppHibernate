@@ -44,7 +44,7 @@ public class RegisterServlet extends HttpServlet {
 	         out.println("<body>");
 	         out.println("<center>");
 	         if(result){
-	             out.println("<h1>Thanks for Registering with us :</h1>");
+	             out.println("<h1>User Registration Successfully completed.</h1>");
 	             out.println("To login with new UserId and Password<a href=login.jsp>Click here</a>");
 	         }else{
 	             out.println("<h1>Registration Failed</h1>");

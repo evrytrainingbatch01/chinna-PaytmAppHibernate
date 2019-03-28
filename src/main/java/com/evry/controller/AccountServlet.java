@@ -27,7 +27,8 @@ public class AccountServlet extends HttpServlet {
 	      
 	     String accountNumber = request.getParameter("accountNumber");
 	     String accountName = request.getParameter("accountName");
-	     int balance=Integer.parseInt(request.getParameter("balance"));
+	      String bal=request.getParameter("balance");
+	      int balance=Integer.parseInt(bal);
 	     
 	     
 	     

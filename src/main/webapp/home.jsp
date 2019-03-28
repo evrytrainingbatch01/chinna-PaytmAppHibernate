@@ -13,7 +13,7 @@
 <body>
 <center>
      <div id="container">
-         <h1> Paytm Application </h1>
+         <h1> Payment Application </h1>
          <b>This is digital application</b>
          </br>
          <%=new Date()%></br>
@@ -23,7 +23,7 @@
              <h3>Welcome <%= user.getFirstName() + " " + user.getLastName()%></h3>     
              <br/>
              
-            <h3> <a href="logout.jsp">Logout</a>|<a href="addmoney.jsp">AddMoney</a>|<a href="transaction.jsp">Transaction</a>|<a href="checkbal.jsp">CheckBalance</a></h3>
+            <h3> <a href="logout.jsp">Logout</a>|<a href="account.jsp">AddAccount</a>|<a href="transaction.jsp">Transaction</a>|<a href="checkbal.jsp">CheckBalance</a>|<a href="addmoney.jsp">AddBalance</a></h3>
          </p>
  
          <table>

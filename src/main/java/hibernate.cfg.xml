@@ -14,6 +14,7 @@
         
        <mapping class="com.evry.model.User"/>
        <mapping class="com.evry.model.Account"/>
-     <!--   <mapping class="com.evry.model.TransferAccount"/> -->
+       
+        <mapping class="com.evry.model.Admin"/> 
     </session-factory>
 </hibernate-configuration>
